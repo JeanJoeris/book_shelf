@@ -1,5 +1,6 @@
 <%= link_to "Add New Book to the Shelf", new_book_path %>
 
+<% if @books %>
 <ul>
   <% @books.each do |book| %>
     <!-- <h2><%= book.title %></h2>
@@ -13,3 +14,6 @@
   <% end %>
 
 </ul>
+<% else %>
+  <h3>We are sorry, there are no books. Please login and add some!</h3>
+<% end %>
